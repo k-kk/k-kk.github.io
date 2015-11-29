@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>编写可维护的javascript代码（语句和表达式） | Hello Hexo - 新的开始</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="if语句正确的写法123456789101112// 不好的写法,尽管它是合法的javascript代码if(true)    alert(&apos;1&apos;);    if(true)&amp;#123; alert(&apos;1&apos;); &amp;#125;if(true) alert(&apos;1&apos;);//好的写法if (true) &amp;#123;  alert(&apos;1&apos;);&amp;#125;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编写可维护的javascript代码（语句和表达式）">
+<meta property="og:url" content="http://yoursite.com/2015/11/29/324324/index.html">
+<meta property="og:site_name" content="Hello Hexo - 新的开始">
+<meta property="og:description" content="if语句正确的写法123456789101112// 不好的写法,尽管它是合法的javascript代码if(true)    alert(&apos;1&apos;);    if(true)&amp;#123; alert(&apos;1&apos;); &amp;#125;if(true) alert(&apos;1&apos;);//好的写法if (true) &amp;#123;  alert(&apos;1&apos;);&amp;#125;">
+<meta property="og:updated_time" content="2015-11-29T15:19:38.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="编写可维护的javascript代码（语句和表达式）">
+<meta name="twitter:description" content="if语句正确的写法123456789101112// 不好的写法,尽管它是合法的javascript代码if(true)    alert(&apos;1&apos;);    if(true)&amp;#123; alert(&apos;1&apos;); &amp;#125;if(true) alert(&apos;1&apos;);//好的写法if (true) &amp;#123;  alert(&apos;1&apos;);&amp;#125;">
+  
+    <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://luckk.me/img/portrait.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">KK</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">前端攻城狮一枚</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">博客首页</a></li>
+				        
+							<li><a href="/archives">文章列表</a></li>
+				        
+							<li><a href="http://www.luckk.me/">我的网站</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/luckk/">我的旧博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">乱码博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">KK</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://luckk.me/img/portrait.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">KK</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">前端攻城狮一枚</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">博客首页</a></li>
+		        
+					<li><a href="/archives">文章列表</a></li>
+		        
+					<li><a href="http://www.luckk.me/">我的网站</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-324324" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/29/324324/" class="article-date">
+  	<time datetime="2015-11-29T12:14:00.000Z" itemprop="datePublished">2015-11-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      编写可维护的javascript代码（语句和表达式）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/javascript/">javascript</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="if语句正确的写法">if语句正确的写法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不好的写法,尽管它是合法的javascript代码</span></span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)</span><br><span class="line">    alert(<span class="string">'1'</span>);</span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123; alert(<span class="string">'1'</span>); &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>) alert(<span class="string">'1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//好的写法</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  alert(<span class="string">'1'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="所有的语句都应该正确使用花括号">所有的语句都应该正确使用花括号</h2><ul>
+<li>if</li>
+<li>for</li>
+<li>while</li>
+<li>do while</li>
+<li>try catch finally</li>
+</ul>
+<h2 id="花括号的对齐方式">花括号的对齐方式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 此风格继承自java，在java的规范中有明确规定</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">   alert(<span class="string">'1'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">   alert(<span class="string">'2'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 此风格是随着 C#流行起来的,因为Visual Studio强制使用这种对齐方式</span></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) </span><br><span class="line">&#123;</span><br><span class="line">   alert(<span class="string">'1'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">   alert(<span class="string">'2'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* </span><br><span class="line">   推荐用第一种，Google javascript 风格指南禁止使用C#的风格，</span><br><span class="line">   Java风格在jqury，javascript以及Dojo等编程指南中都出现过。</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="块语句间隔">块语句间隔</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//以下三种风格推荐第二种，它是第一种风格和第三种风格的这中</span></span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">   alert(<span class="string">'1'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">   alert(<span class="string">'1'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> ( <span class="literal">true</span> ) &#123;</span><br><span class="line">   alert(<span class="string">'1'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="switch语句（缩进及连续执行）">switch语句（缩进及连续执行）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(num) &#123;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">//明显的依次执行</span></span><br><span class="line">   <span class="keyword">case</span> <span class="number">1</span>：</span><br><span class="line">   <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">      <span class="comment">// 代码</span></span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">      <span class="comment">// 代码</span></span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">   </span><br><span class="line">      <span class="comment">/* fall through */</span></span><br><span class="line">   <span class="keyword">default</span>:</span><br><span class="line">      <span class="comment">// 代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 连续执行建议是：只要有意并添加了注释，就可以使用case语句的连续执行。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span>(num) &#123;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">//明显的依次执行</span></span><br><span class="line">   <span class="keyword">case</span> <span class="number">1</span>：</span><br><span class="line">      <span class="comment">// 代码</span></span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">      <span class="comment">// 代码</span></span><br><span class="line">      <span class="keyword">break</span></span><br><span class="line">   </span><br><span class="line">   <span class="comment">// 没有 default</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 关于default：最好写上，如果没有默认行为也可以不写，但是得像上面一样标注下，主要是因为它属于switch的组成部分，</span></span><br></pre></td></tr></table></figure>
+<h2 id="with语句">with语句</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> book = &#123;</span><br><span class="line">  title: <span class="string">'我是title'</span>,</span><br><span class="line">  author: <span class="string">'我是author'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> message = <span class="string">'The book is'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> (book) &#123;</span><br><span class="line">  message += title;</span><br><span class="line">  message += <span class="string">' by '</span> + author;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 关于with，最好不要使用，因为我们很难辨别title和author出现的位置,它在 Google以及javascript风格指南都是明确禁止的。</span></span><br></pre></td></tr></table></figure>
+<h2 id="for循环_以及for_in">for循环 以及for in</h2><ul>
+<li>编程时候禁止使用break和continue;</li>
+<li>for in 遍历自定义对象属性时，最好使用hasOwnProperty()来过滤,如果包含原型链则不需要<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> prop;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(prop <span class="keyword">in</span> object) &#123;</span><br><span class="line"> <span class="keyword">if</span>(object.hasOwnProperty(prop))&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'Property name us '</span> + prop);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/11/28/21/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">物理运动学公式汇总</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="324324" data-title="编写可维护的javascript代码（语句和表达式）" data-url="http://yoursite.com/2015/11/29/324324/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"luckk"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 KK
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
