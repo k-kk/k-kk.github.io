@@ -179,6 +179,110 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-javascript模板" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/10/javascript模板/" class="article-date">
+  	<time datetime="2015-12-10T14:42:01.000Z" itemprop="datePublished">2015-12-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/10/javascript模板/">javascript命名空间(单全局)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="通过创建新的全局对象来建自己的命名空间">通过创建新的全局对象来建自己的命名空间</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ZalasBooks = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 表示这本书的命名空间</span></span><br><span class="line">ZalasBooks.MaintainableJavascript = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 表示另外一本书的命名空间</span></span><br><span class="line">ZalasBooks.HinghPerformanceJavascript = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/10/javascript模板/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-javascript规范-2015-11-30" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/30/javascript规范-2015-11-30/" class="article-date">
+  	<time datetime="2015-11-30T14:35:09.000Z" itemprop="datePublished">2015-11-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/30/javascript规范-2015-11-30/">javascript规范 (2015.11.30)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="严格模式中的运算符规则和非严格模式下有很大的不同">严格模式中的运算符规则和非严格模式下有很大的不同</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不好的写法</span></span><br><span class="line">use strict</span><br><span class="line"><span class="comment">// 好的写法</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="pi">   'use strict'</span>; <span class="comment">// 让它在一个单独的作用域里执行</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-324324" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -667,131 +771,10 @@
 
 
   
-    <article id="post-post" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/11/26/post/" class="article-date">
-  	<time datetime="2015-11-26T14:51:00.000Z" itemprop="datePublished">2015-11-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/26/post/">编写可维护的javascript代码（基本格式化）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.1 每行的编码需要控制在80字符。</p>
-<p>1.2 改用；的地方必须用上。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码规范/">代码规范 </a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/javascript/">javascript</a><a class="article-category-link" href="/categories/javascript/代码规范/">代码规范</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/26/post/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/26/hello-world/" class="article-date">
-  	<time datetime="2015-11-26T14:51:00.000Z" itemprop="datePublished">2015-11-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/26/hello-world/">编写可维护的javascript代码---开篇（介绍自动报错的插件）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="文章开篇主要推荐了2款检测编程风格的工具h3">文章开篇主要推荐了2款检测编程风格的工具h3</h2><p>JSLint和JSHint:<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jshint/">jshint</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jslint/">jslint</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime自动报错插件/">sublime自动报错插件</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/javascript/">javascript</a><a class="article-category-link" href="/categories/javascript/提示/">提示</a><a class="article-category-link" href="/categories/javascript/提示/sublime插件/">sublime插件</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/26/hello-world/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
