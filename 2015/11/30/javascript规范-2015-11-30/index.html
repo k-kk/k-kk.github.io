@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript规范 (2015.11.30) | Hello Hexo - 新的开始</title>
+  <title>javascript严格模式的使用 | Hello Hexo - 新的开始</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="严格模式中的运算符规则和非严格模式下有很大的不同123456// 不好的写法use strict// 好的写法(function()&amp;#123;   &apos;use strict&apos;; // 让它在一个单独的作用域里执行&amp;#125;)();">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript规范 (2015.11.30)">
+<meta property="og:title" content="javascript严格模式的使用">
 <meta property="og:url" content="http://yoursite.com/2015/11/30/javascript规范-2015-11-30/index.html">
 <meta property="og:site_name" content="Hello Hexo - 新的开始">
 <meta property="og:description" content="严格模式中的运算符规则和非严格模式下有很大的不同123456// 不好的写法use strict// 好的写法(function()&amp;#123;   &apos;use strict&apos;; // 让它在一个单独的作用域里执行&amp;#125;)();">
-<meta property="og:updated_time" content="2015-12-10T14:32:37.787Z">
+<meta property="og:updated_time" content="2015-12-10T15:57:51.972Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript规范 (2015.11.30)">
+<meta name="twitter:title" content="javascript严格模式的使用">
 <meta name="twitter:description" content="严格模式中的运算符规则和非严格模式下有很大的不同123456// 不好的写法use strict// 好的写法(function()&amp;#123;   &apos;use strict&apos;; // 让它在一个单独的作用域里执行&amp;#125;)();">
   
     <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
@@ -110,7 +110,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/代码规范/" style="font-size: 20px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a>
+						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/代码规范/" style="font-size: 20px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/命名/" style="font-size: 10px;">命名</a> <a href="/tags/对象/" style="font-size: 10px;">对象</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a>
 					</div>
 				</section>
 				
@@ -182,7 +182,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/30/javascript规范-2015-11-30/" class="article-date">
-  	<time datetime="2015-11-30T14:35:09.000Z" itemprop="datePublished">2015-11-30</time>
+  	<time datetime="2015-11-30T14:35:00.000Z" itemprop="datePublished">2015-11-30</time>
 </a>
     </div>
   
@@ -195,7 +195,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      javascript规范 (2015.11.30)
+      javascript严格模式的使用
     </h1>
   
 
@@ -203,7 +203,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/use-strict/">use strict</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/严格模式/">严格模式</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/代码规范/">代码规范</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -260,7 +268,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="javascript规范-2015-11-30" data-title="javascript规范 (2015.11.30)" data-url="http://yoursite.com/2015/11/30/javascript规范-2015-11-30/"></div>
+	<div class="ds-thread" data-thread-key="javascript规范-2015-11-30" data-title="javascript严格模式的使用" data-url="http://yoursite.com/2015/11/30/javascript规范-2015-11-30/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
