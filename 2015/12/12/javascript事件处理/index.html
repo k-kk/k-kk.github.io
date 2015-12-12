@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript严格模式的使用 | Hello Hexo - 新的开始</title>
+  <title>javascript事件处理 | Hello Hexo - 新的开始</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="严格模式中的运算符规则和非严格模式下有很大的不同123456// 不好的写法use strict// 好的写法(function()&amp;#123;   &apos;use strict&apos;; // 让它在一个单独的作用域里执行&amp;#125;)();">
+  <meta name="description" content="123456789// 不好的写法function handleClick(event)&amp;#123;  var popup = document.querySelector(&apos;#popup&apos;);  popip.style.left = event.clientX + &apos;px&apos;;  popip.style.top = event.clientY + &apos;px&apos;;  popup.classList.ad">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript严格模式的使用">
-<meta property="og:url" content="http://yoursite.com/2015/11/30/javascript规范-2015-11-30/index.html">
+<meta property="og:title" content="javascript事件处理">
+<meta property="og:url" content="http://yoursite.com/2015/12/12/javascript事件处理/index.html">
 <meta property="og:site_name" content="Hello Hexo - 新的开始">
-<meta property="og:description" content="严格模式中的运算符规则和非严格模式下有很大的不同123456// 不好的写法use strict// 好的写法(function()&amp;#123;   &apos;use strict&apos;; // 让它在一个单独的作用域里执行&amp;#125;)();">
-<meta property="og:updated_time" content="2015-12-10T15:57:51.972Z">
+<meta property="og:description" content="123456789// 不好的写法function handleClick(event)&amp;#123;  var popup = document.querySelector(&apos;#popup&apos;);  popip.style.left = event.clientX + &apos;px&apos;;  popip.style.top = event.clientY + &apos;px&apos;;  popup.classList.ad">
+<meta property="og:updated_time" content="2015-12-12T15:29:11.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript严格模式的使用">
-<meta name="twitter:description" content="严格模式中的运算符规则和非严格模式下有很大的不同123456// 不好的写法use strict// 好的写法(function()&amp;#123;   &apos;use strict&apos;; // 让它在一个单独的作用域里执行&amp;#125;)();">
+<meta name="twitter:title" content="javascript事件处理">
+<meta name="twitter:description" content="123456789// 不好的写法function handleClick(event)&amp;#123;  var popup = document.querySelector(&apos;#popup&apos;);  popip.style.left = event.clientX + &apos;px&apos;;  popip.style.top = event.clientY + &apos;px&apos;;  popup.classList.ad">
   
     <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
   
@@ -178,11 +178,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-javascript规范-2015-11-30" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-javascript事件处理" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/30/javascript规范-2015-11-30/" class="article-date">
-  	<time datetime="2015-11-30T14:35:00.000Z" itemprop="datePublished">2015-11-30</time>
+      <a href="/2015/12/12/javascript事件处理/" class="article-date">
+  	<time datetime="2015-12-12T14:55:00.000Z" itemprop="datePublished">2015-12-12</time>
 </a>
     </div>
   
@@ -195,7 +195,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      javascript严格模式的使用
+      javascript事件处理
     </h1>
   
 
@@ -204,12 +204,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/use-strict/">use strict</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/严格模式/">严格模式</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码重构/">代码重构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/构造event对象/">构造event对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逻辑/">逻辑 </a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/代码规范/">代码规范</a>
+	<a class="article-category-link" href="/categories/javascript/">javascript</a>
 	</div>
 
 
@@ -219,7 +219,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="严格模式中的运算符规则和非严格模式下有很大的不同">严格模式中的运算符规则和非严格模式下有很大的不同</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不好的写法</span></span><br><span class="line">use strict</span><br><span class="line"><span class="comment">// 好的写法</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="pi">   'use strict'</span>; <span class="comment">// 让它在一个单独的作用域里执行</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不好的写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> popup = <span class="built_in">document</span>.querySelector(<span class="string">'#popup'</span>);</span><br><span class="line">  popip.style.left = event.clientX + <span class="string">'px'</span>;</span><br><span class="line">  popip.style.top = event.clientY + <span class="string">'px'</span>;</span><br><span class="line">  popup.classList.add(<span class="string">'active'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.addEventListener(<span class="string">'click'</span>, handleClick, flase);</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 好的写法</span></span><br><span class="line"><span class="keyword">var</span> MyApplication = &#123;</span><br><span class="line">  handleClick: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">  	</span><br><span class="line">    <span class="comment">// 假设事件支持DOM Level2</span></span><br><span class="line">    event.preventDefault();</span><br><span class="line">    event.stopPropagation();</span><br><span class="line">   </span><br><span class="line">    <span class="comment">// 进入应用逻辑 </span></span><br><span class="line">    <span class="keyword">this</span>.showPopup(event.clentX,event.clentY);</span><br><span class="line">  &#125;,</span><br><span class="line">  showPopup: <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> popup = <span class="built_in">document</span>.querySelector(<span class="string">'#popup'</span>);</span><br><span class="line">    popip.style.left = x + <span class="string">'px'</span>;</span><br><span class="line">    popip.style.top = y + <span class="string">'px'</span>;</span><br><span class="line">    popup.classList.add(<span class="string">'active'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">   MyApplication.handleClick(event);</span><br><span class="line">&#125;, flase);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 其他地方同样也可以调用而不受event约束</span></span><br><span class="line">MyApplication.showPopup(<span class="number">100</span>,<span class="number">90</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="代码说明">代码说明</h3><p>MyApplication.handleClick()是事件处理程序，因此它在将数据传入应用逻辑之前调用了event.preventDefault()和event.stopPropagation(),这很清楚的展示了处理程序和应用逻辑之间的分工。因为逻辑不需要对event产生依赖进而很多地方都可以轻松地使用相同的业务逻辑，包裹测试代码。</p>
+
       
     </div>
     
@@ -228,18 +232,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/10/javascript模板/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          javascript命名空间(单全局)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/29/324324/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">编写可维护的javascript代码（语句和表达式）</div>
+    <a href="/2015/12/10/javascript模板/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript命名空间(单全局)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -268,7 +263,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="javascript规范-2015-11-30" data-title="javascript严格模式的使用" data-url="http://yoursite.com/2015/11/30/javascript规范-2015-11-30/"></div>
+	<div class="ds-thread" data-thread-key="javascript事件处理" data-title="javascript事件处理" data-url="http://yoursite.com/2015/12/12/javascript事件处理/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

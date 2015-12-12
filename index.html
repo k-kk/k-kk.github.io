@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/代码规范/" style="font-size: 20px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/命名/" style="font-size: 10px;">命名</a> <a href="/tags/对象/" style="font-size: 10px;">对象</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a>
+						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/代码规范/" style="font-size: 20px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/代码重构/" style="font-size: 10px;">代码重构</a> <a href="/tags/命名/" style="font-size: 10px;">命名</a> <a href="/tags/对象/" style="font-size: 10px;">对象</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/构造event对象/" style="font-size: 10px;">构造event对象</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/逻辑/" style="font-size: 10px;">逻辑 </a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,68 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-javascript事件处理" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/12/javascript事件处理/" class="article-date">
+  	<time datetime="2015-12-12T14:55:00.000Z" itemprop="datePublished">2015-12-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/12/javascript事件处理/">javascript事件处理</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不好的写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleClick</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> popup = <span class="built_in">document</span>.querySelector(<span class="string">'#popup'</span>);</span><br><span class="line">  popip.style.left = event.clientX + <span class="string">'px'</span>;</span><br><span class="line">  popip.style.top = event.clientY + <span class="string">'px'</span>;</span><br><span class="line">  popup.classList.add(<span class="string">'active'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.addEventListener(<span class="string">'click'</span>, handleClick, flase);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码重构/">代码重构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/构造event对象/">构造event对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逻辑/">逻辑 </a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/javascript/">javascript</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/12/javascript事件处理/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-javascript模板" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -709,68 +771,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/11/28/draft/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-page" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/27/page/" class="article-date">
-  	<time datetime="2015-11-26T16:00:00.000Z" itemprop="datePublished">2015-11-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/page/">编写可维护的javascript代码（注释）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-单行注释_h4">1.单行注释 h4</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是一句单行注释</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码规范/">代码规范</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/注释/">注释</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/javascript/">javascript</a><a class="article-category-link" href="/categories/javascript/代码规范/">代码规范</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/27/page/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
