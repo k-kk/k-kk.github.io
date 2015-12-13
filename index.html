@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/代码规范/" style="font-size: 20px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/代码重构/" style="font-size: 10px;">代码重构</a> <a href="/tags/命名/" style="font-size: 10px;">命名</a> <a href="/tags/对象/" style="font-size: 10px;">对象</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/构造event对象/" style="font-size: 10px;">构造event对象</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/逻辑/" style="font-size: 10px;">逻辑 </a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a>
+						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/throw/" style="font-size: 10px;">throw</a> <a href="/tags/try-catch/" style="font-size: 10px;">try catch</a> <a href="/tags/typeof/" style="font-size: 10px;">typeof</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/代码规范/" style="font-size: 20px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/代码重构/" style="font-size: 10px;">代码重构</a> <a href="/tags/命名/" style="font-size: 10px;">命名</a> <a href="/tags/对象/" style="font-size: 10px;">对象</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/抛错/" style="font-size: 10px;">抛错</a> <a href="/tags/构造event对象/" style="font-size: 10px;">构造event对象</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/空比较/" style="font-size: 10px;">空比较</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/逻辑/" style="font-size: 10px;">逻辑 </a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a>
 					</div>
 				</section>
 				
@@ -178,6 +178,137 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-javascript避免空比较" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/13/javascript避免空比较/" class="article-date">
+  	<time datetime="2015-12-13T08:50:00.000Z" itemprop="datePublished">2015-12-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/13/javascript避免空比较/">javascript避免空比较</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="用typeof检测原始值">用typeof检测原始值</h3><ul>
+<li>对于字符串 typeof 返回 “string”。</li>
+<li>对于数字 typeof 返回 “number”。</li>
+<li>对于布尔值 typeof 返回 “boolean”。</li>
+<li>对于undefined typeof 返回 “undefined”。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// typeof 基本语法</span></span><br><span class="line"><span class="keyword">typeof</span> variable</span><br><span class="line"><span class="keyword">typeof</span>(variable);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeof/">typeof</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/空比较/">空比较</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/javascript/">javascript</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/13/javascript避免空比较/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Untitled-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/13/Untitled-3/" class="article-date">
+  	<time datetime="2015-12-13T08:40:00.000Z" itemprop="datePublished">2015-12-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/13/Untitled-3/">javascript抛错</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// getDivs，任何只要element不满足继续执行的条件，就会抛出陈述问题</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDivs</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (element &amp;&amp; element.getElementsByTagName(element)) &#123;</span><br><span class="line">    <span class="keyword">return</span> element.getElementsByTagName(<span class="string">'div'</span>);</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'getDivs():argument must be a DOM element'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#####自定义错误类型<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">MyError</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">this</span>.message = message;</span><br><span class="line"> &#125;</span><br><span class="line"> Myerror.prototype = <span class="keyword">new</span> <span class="built_in">Error</span>();</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">throw</span> <span class="keyword">new</span> MyError(<span class="string">'hello word'</span>);</span><br><span class="line"> </span><br><span class="line"><span class="comment">//  提示：该方法在IE8和更早浏览器不显示错误信息，</span></span><br><span class="line"><span class="comment">// 相反会看见通用  的'Exception thrown but nt caught'消息,</span></span><br><span class="line"><span class="comment">// 这个方法最大的好处是，自定义错误类型检测错误;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">  <span class="comment">// 有些代码引发错误</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">  <span class="keyword">if</span>(e <span class="keyword">instanceof</span> myError)&#123;</span><br><span class="line">    <span class="comment">// 处理自己的错误</span></span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="comment">// 其它处理</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/throw/">throw</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/try-catch/">try catch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/抛错/">抛错</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/javascript/">javascript</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/13/Untitled-3/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-javascript事件处理" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -646,131 +777,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/11/28/地方/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-我企鹅前雾灯" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/28/我企鹅前雾灯/" class="article-date">
-  	<time datetime="2015-11-28T08:18:00.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/我企鹅前雾灯/">Sublime Text3配置Node.js开发环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、下载Nodejs插件，下载地址为：<br><a href="https://github.com/tanepiper/SublimeText-Nodejs">https://github.com/tanepiper/SublimeText-Nodejs</a><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/sublime插件/">sublime插件</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/28/我企鹅前雾灯/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-draft" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/28/draft/" class="article-date">
-  	<time datetime="2015-11-27T16:08:00.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/draft/">移动端html5重力感应</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>下面是测试案例，只测试过itouch,iphone<br><a href="http://06wjin.sinaapp.com/billd/">http://06wjin.sinaapp.com/billd/</a><br><a href="http://06wjin.sinaapp.com/billd/test.html">http://06wjin.sinaapp.com/billd/test.html</a></p>
-<p>##重力感应主要用到两种事件：h4<br>1 orientationchange<br>这个事件在屏幕发生翻转时触发 window.orientation可获得设备的方向，一共有三个值0：竖直,   90：右旋,   -90：左旋<br>2 deviceorientation 和 MozOrientation(firefox专用)<br> deviceorientation事件可获得三个值alpha,beta,gamma，分别代表绕Z轴的旋转角度(0~360)，绕X轴的旋转角度(-180~180)，绕Y轴的旋转角度(-90~90)<br> MozOrientation事件中可获得三个值z,x,y，分别代表垂直加速度，左右的倾斜角度，前后的倾斜角度(取值范围：-1~1)<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重力感应/">重力感应</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/HTML5/">HTML5</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/28/draft/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
