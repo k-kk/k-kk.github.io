@@ -3,30 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript避免空比较 | Hello Hexo - 新的开始</title>
+  <title>阻止javascript修改 | Hello Hexo - 新的开始</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用typeof检测原始值
-对于字符串 typeof 返回 “string”。
-对于数字 typeof 返回 “number”。
-对于布尔值 typeof 返回 “boolean”。
-对于undefined typeof 返回 “undefined”。123// typeof 基本语法typeof variabletypeof(variable);">
+  <meta name="description" content="Object.preventExtension()和Object.isExtensible()12345678var person = &amp;#123;  name: &apos;kk&apos;&amp;#125;;// 锁定对象Object.preventExtension(person);console.log(Object.isExtensible(person)); // falseperson.age = 18; /">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript避免空比较">
-<meta property="og:url" content="http://yoursite.com/2015/12/13/javascript避免空比较/index.html">
+<meta property="og:title" content="阻止javascript修改">
+<meta property="og:url" content="http://yoursite.com/2015/12/13/Untitled111/index.html">
 <meta property="og:site_name" content="Hello Hexo - 新的开始">
-<meta property="og:description" content="用typeof检测原始值
-对于字符串 typeof 返回 “string”。
-对于数字 typeof 返回 “number”。
-对于布尔值 typeof 返回 “boolean”。
-对于undefined typeof 返回 “undefined”。123// typeof 基本语法typeof variabletypeof(variable);">
-<meta property="og:updated_time" content="2015-12-13T13:05:33.720Z">
+<meta property="og:description" content="Object.preventExtension()和Object.isExtensible()12345678var person = &amp;#123;  name: &apos;kk&apos;&amp;#125;;// 锁定对象Object.preventExtension(person);console.log(Object.isExtensible(person)); // falseperson.age = 18; /">
+<meta property="og:updated_time" content="2015-12-15T15:57:05.122Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript避免空比较">
-<meta name="twitter:description" content="用typeof检测原始值
-对于字符串 typeof 返回 “string”。
-对于数字 typeof 返回 “number”。
-对于布尔值 typeof 返回 “boolean”。
-对于undefined typeof 返回 “undefined”。123// typeof 基本语法typeof variabletypeof(variable);">
+<meta name="twitter:title" content="阻止javascript修改">
+<meta name="twitter:description" content="Object.preventExtension()和Object.isExtensible()12345678var person = &amp;#123;  name: &apos;kk&apos;&amp;#125;;// 锁定对象Object.preventExtension(person);console.log(Object.isExtensible(person)); // falseperson.age = 18; /">
   
     <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
   
@@ -190,11 +178,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-javascript避免空比较" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Untitled111" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/13/javascript避免空比较/" class="article-date">
-  	<time datetime="2015-12-13T08:50:00.000Z" itemprop="datePublished">2015-12-13</time>
+      <a href="/2015/12/13/Untitled111/" class="article-date">
+  	<time datetime="2015-12-13T08:35:00.000Z" itemprop="datePublished">2015-12-13</time>
 </a>
     </div>
   
@@ -207,7 +195,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      javascript避免空比较
+      阻止javascript修改
     </h1>
   
 
@@ -216,7 +204,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typeof/">typeof</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/空比较/">空比较</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/阻止修改/">阻止修改</a></li></ul>
 	</div>
 
         
@@ -231,16 +219,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="用typeof检测原始值">用typeof检测原始值</h3><ul>
-<li>对于字符串 typeof 返回 “string”。</li>
-<li>对于数字 typeof 返回 “number”。</li>
-<li>对于布尔值 typeof 返回 “boolean”。</li>
-<li>对于undefined typeof 返回 “undefined”。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// typeof 基本语法</span></span><br><span class="line"><span class="keyword">typeof</span> variable</span><br><span class="line"><span class="keyword">typeof</span>(variable);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+        <h6 id="Object-preventExtension()和Object-isExtensible()">Object.preventExtension()和Object.isExtensible()</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">'kk'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 锁定对象</span></span><br><span class="line"><span class="built_in">Object</span>.preventExtension(person);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isExtensible(person)); <span class="comment">// false</span></span><br><span class="line">person.age = <span class="number">18</span>; <span class="comment">// 正常情况下悄悄失败，除非在strict模式下抛错</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这看上去很怪异，被认为是标准中的严重bug</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span>); <span class="comment">// object</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 检测某个应用值类型最好的方法是用instanceof运算符</span></span><br><span class="line">value <span class="keyword">instanceof</span> constructor</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检测日期</span></span><br><span class="line"><span class="keyword">if</span> (value <span class="keyword">instanceof</span> <span class="built_in">Date</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value.getFullYear());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检测正则表达式</span></span><br><span class="line"><span class="keyword">if</span> (value <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (value.test(anotherValue)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Matches"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检测error</span></span><br><span class="line"><span class="keyword">if</span> (value <span class="keyword">instanceof</span> <span class="built_in">Error</span>) &#123;</span><br><span class="line">  thow value;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检查实例对象是否存在</span></span><br><span class="line"><span class="keyword">var</span> json = &#123;</span><br><span class="line">  a: <span class="number">1</span>,</span><br><span class="line">  b: <span class="number">2</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 这是一种</span></span><br><span class="line"> <span class="keyword">if</span> (<span class="string">"c"</span> <span class="keyword">in</span> json) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'存在'</span>);</span><br><span class="line"> &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'不存在'</span>);</span><br><span class="line"> &#125;</span><br><span class="line"><span class="comment">// 这又另外一种,对于所有非DOM对象来说，这是好的写法</span></span><br><span class="line"><span class="keyword">if</span> (json.hasOwnProperty(<span class="string">"a"</span>)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'存在'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 如果你不确定是否为DOM对象，则这样来写</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">'a'</span> <span class="keyword">in</span> json &amp;&amp; json.hasOwnProperty(<span class="string">"a"</span>)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'存在'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h6 id="Object-seal()和Object-isSealed()">Object.seal()和Object.isSealed()</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">'kk'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 密封对象</span></span><br><span class="line"><span class="built_in">Object</span>.seal(person);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isExtensible(person)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isSelaed(person)); <span class="comment">// true</span></span><br><span class="line"><span class="keyword">delete</span> person.name; <span class="comment">// 正常情况下悄悄失败，除非在strict模式下抛错</span></span><br><span class="line">person.age = <span class="number">18</span>; <span class="comment">// 同上</span></span><br></pre></td></tr></table></figure>
+<h6 id="Object-freeze()和Object-isFrozen()">Object.freeze()和Object.isFrozen()</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">'kk'</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 冻结对象</span></span><br><span class="line"><span class="built_in">Object</span>.freeze(person);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isExtensible(person)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isSelaed(person)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isFrozen(person)); <span class="comment">// true</span></span><br><span class="line">person.name = <span class="string">'jj'</span>; <span class="comment">// 正常情况下悄悄失败，除非在strict模式下抛错</span></span><br><span class="line"><span class="keyword">delete</span> person.name; <span class="comment">// 同上</span></span><br><span class="line">person.age = <span class="number">18</span>; <span class="comment">// 同上</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -249,18 +231,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/12/15/324324-1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/12/13/Untitled-3/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          基于对象的继承
+          javascript抛错
         
       </div>
     </a>
   
   
-    <a href="/2015/12/13/Untitled-3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">javascript抛错</div>
+    <a href="/2015/12/12/javascript事件处理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript事件处理</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -289,7 +271,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="javascript避免空比较" data-title="javascript避免空比较" data-url="http://yoursite.com/2015/12/13/javascript避免空比较/"></div>
+	<div class="ds-thread" data-thread-key="Untitled111" data-title="阻止javascript修改" data-url="http://yoursite.com/2015/12/13/Untitled111/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

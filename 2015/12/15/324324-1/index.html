@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 逻辑  | Hello Hexo - 新的开始</title>
+  <title>基于对象的继承 | Hello Hexo - 新的开始</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="KK个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello Hexo - 新的开始">
-<meta property="og:url" content="http://yoursite.com/tags/逻辑/index.html">
+  <meta name="description" content="以下例子创建一个新对象myPerson，它继承自person12345678910111213141516var person = &amp;#123;  name: &apos;kk&apos;,  sayName: function() &amp;#123;   alert(this.name);  &amp;#125;&amp;#125;;vae myPerson = Object.create(person);myPerson.sayNam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于对象的继承">
+<meta property="og:url" content="http://yoursite.com/2015/12/15/324324-1/index.html">
 <meta property="og:site_name" content="Hello Hexo - 新的开始">
-<meta property="og:description" content="KK个人博客">
+<meta property="og:description" content="以下例子创建一个新对象myPerson，它继承自person12345678910111213141516var person = &amp;#123;  name: &apos;kk&apos;,  sayName: function() &amp;#123;   alert(this.name);  &amp;#125;&amp;#125;;vae myPerson = Object.create(person);myPerson.sayNam">
+<meta property="og:updated_time" content="2015-12-15T15:58:13.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello Hexo - 新的开始">
-<meta name="twitter:description" content="KK个人博客">
+<meta name="twitter:title" content="基于对象的继承">
+<meta name="twitter:description" content="以下例子创建一个新对象myPerson，它继承自person12345678910111213141516var person = &amp;#123;  name: &apos;kk&apos;,  sayName: function() &amp;#123;   alert(this.name);  &amp;#125;&amp;#125;;vae myPerson = Object.create(person);myPerson.sayNam">
   
     <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
   
@@ -177,57 +178,117 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-324324-1" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/12/12/javascript事件处理/" class="archive-article-date">
-  	<time datetime="2015-12-12T14:55:00.000Z" itemprop="datePublished">12月 12</time>
+    <div class="article-meta">
+      <a href="/2015/12/15/324324-1/" class="article-date">
+  	<time datetime="2015-12-15T12:16:00.000Z" itemprop="datePublished">2015-12-15</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/12/javascript事件处理/">javascript事件处理</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于对象的继承
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码重构/">代码重构</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/构造event对象/">构造event对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/逻辑/">逻辑 </a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象/">对象</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/javascript/">javascript</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="以下例子创建一个新对象myPerson，它继承自person">以下例子创建一个新对象myPerson，它继承自person</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">'kk'</span>,</span><br><span class="line">  sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   alert(<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">vae myPerson = <span class="built_in">Object</span>.create(person);</span><br><span class="line">myPerson.sayName();  <span class="comment">// 弹出kk</span></span><br><span class="line"></span><br><span class="line">myPerson.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'jj'</span>); <span class="comment">// 重定义</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">myPerson.sayName();  <span class="comment">// 弹出jj</span></span><br><span class="line">person.sayName();  <span class="comment">// 弹出kk</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h6 id="Object-create()_第二个参数">Object.create() 第二个参数</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myPerson = <span class="built_in">Object</span>.create(person, &#123;</span><br><span class="line">  name: &#123;</span><br><span class="line">    value: <span class="string">'Greg'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line"> myPreson.sayName();  <span class="comment">// 弹出Greg</span></span><br><span class="line"> person.sayName(); <span class="comment">// 弹出 'kk'</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">// 这个例子myPerson是有自己的name属性的，所以调用显示Greg</span></span><br><span class="line"> <span class="comment">// 这种方式的继承你可以随意修改，因为你是该对象的拥有者</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/15/编写可维护的js代码-变量，函数和运算符/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          基于类型的继承
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/13/javascript避免空比较/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript避免空比较</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="324324-1" data-title="基于对象的继承" data-url="http://yoursite.com/2015/12/15/324324-1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"luckk"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -253,9 +314,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
