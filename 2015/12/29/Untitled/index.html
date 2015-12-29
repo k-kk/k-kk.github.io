@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>代码重构 | Hello Hexo - 新的开始</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123; 	 console.log(data.id);    console.log(data.name);    console.lo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="代码重构">
+<meta property="og:url" content="http://yoursite.com/2015/12/29/Untitled/index.html">
+<meta property="og:site_name" content="Hello Hexo - 新的开始">
+<meta property="og:description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123; 	 console.log(data.id);    console.log(data.name);    console.lo">
+<meta property="og:updated_time" content="2015-12-29T15:28:26.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="代码重构">
+<meta name="twitter:description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123; 	 console.log(data.id);    console.log(data.name);    console.lo">
+  
+    <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://luckk.me/img/portrait.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">KK</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">前端攻城狮一枚</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">博客首页</a></li>
+				        
+							<li><a href="/archives">文章列表</a></li>
+				        
+							<li><a href="http://www.luckk.me/">我的网站</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/jshint/" style="font-size: 10px;">jshint</a> <a href="/tags/jslint/" style="font-size: 10px;">jslint</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/rem/" style="font-size: 10px;">rem</a> <a href="/tags/sublime/" style="font-size: 10px;">sublime</a> <a href="/tags/sublime自动报错插件/" style="font-size: 10px;">sublime自动报错插件</a> <a href="/tags/throw/" style="font-size: 10px;">throw</a> <a href="/tags/try-catch/" style="font-size: 10px;">try catch</a> <a href="/tags/typeof/" style="font-size: 10px;">typeof</a> <a href="/tags/use-strict/" style="font-size: 10px;">use strict</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/代码规范/" style="font-size: 20px;">代码规范</a> <a href="/tags/代码规范/" style="font-size: 10px;">代码规范 </a> <a href="/tags/代码重构/" style="font-size: 10px;">代码重构</a> <a href="/tags/命名/" style="font-size: 10px;">命名</a> <a href="/tags/对象/" style="font-size: 20px;">对象</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/抛错/" style="font-size: 10px;">抛错</a> <a href="/tags/构造event对象/" style="font-size: 10px;">构造event对象</a> <a href="/tags/注释/" style="font-size: 10px;">注释</a> <a href="/tags/空比较/" style="font-size: 10px;">空比较</a> <a href="/tags/类型继承/" style="font-size: 10px;">类型继承</a> <a href="/tags/运动学公式/" style="font-size: 10px;">运动学公式</a> <a href="/tags/逻辑/" style="font-size: 10px;">逻辑 </a> <a href="/tags/重力感应/" style="font-size: 10px;">重力感应</a> <a href="/tags/阻止修改/" style="font-size: 10px;">阻止修改</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/luckk/">我的旧博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">乱码博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">KK</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://luckk.me/img/portrait.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">KK</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">前端攻城狮一枚</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">博客首页</a></li>
+		        
+					<li><a href="/archives">文章列表</a></li>
+		        
+					<li><a href="http://www.luckk.me/">我的网站</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-Untitled" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/29/Untitled/" class="article-date">
+  	<time datetime="2015-12-29T14:33:00.000Z" itemprop="datePublished">2015-12-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      代码重构
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/重构/">重构</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="提炼函数">提炼函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧的</span></span><br><span class="line"><span class="keyword">var</span> getUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $ajax(<span class="string">'http://xxx.com/userInfo.pnp'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line"> 	 <span class="built_in">console</span>.log(data.id);</span><br><span class="line">    <span class="built_in">console</span>.log(data.name);</span><br><span class="line">    <span class="built_in">console</span>.log(data.nickName);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成</span></span><br><span class="line"><span class="keyword">var</span> getUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $ajax(<span class="string">'http://xxx.com/userInfo.pnp'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> data </span>)</span>&#123;</span><br><span class="line"> 	 printDetails( data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> printDetails = <span class="function"><span class="keyword">function</span>(<span class="params"> data </span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log( data.id );</span><br><span class="line">   <span class="built_in">console</span>.log( data.name );</span><br><span class="line">   <span class="built_in">console</span>.log( data.nickName );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>避免出现超大函数</li>
+<li>独立出来的函数有助于代码复用</li>
+<li>独立出来的函数更容易被覆写</li>
+<li><p>独立出来的函数如果有一个良好的命名，它本身就起到了注释的作用</p>
+<a id="more"></a>
+<h2 id="合并重复的条件片段">合并重复的条件片段</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧的</span></span><br><span class="line"><span class="keyword">var</span> paging = <span class="function"><span class="keyword">function</span>(<span class="params"> currPage </span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>( currPage &lt;= <span class="number">0</span> )&#123;</span><br><span class="line">    currPage = <span class="number">0</span>; </span><br><span class="line">    jump( currPage ); <span class="comment">// 跳转</span></span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>( currPage &gt;= totalPage )&#123;</span><br><span class="line">    currPage = totalPage;</span><br><span class="line">    jump( currPage ); <span class="comment">// 跳转</span></span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    jump( currPage ); <span class="comment">// 跳转</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成</span></span><br><span class="line"><span class="keyword">var</span> paging = <span class="function"><span class="keyword">function</span>(<span class="params"> currPage </span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>( currPage &lt;= <span class="number">0</span> )&#123;</span><br><span class="line">    currPage = <span class="number">0</span>; </span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>( currPage &gt;= totalPage )&#123;</span><br><span class="line">    currPage = totalPage;</span><br><span class="line">  &#125;</span><br><span class="line">  jump( currPage ); <span class="comment">// 跳转</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>jump( currPage ); 在每个条件分支内都出现了，所以完全可以把代码独立出来</p>
+<h2 id="把条件分支语句提炼成函数">把条件分支语句提炼成函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧的</span></span><br><span class="line"><span class="keyword">var</span> getPrice = <span class="function"><span class="keyword">function</span>(<span class="params"> price </span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="keyword">if</span>( data.getMonth() &gt;= <span class="number">6</span> &amp;&amp; data.getMonth &lt;= <span class="number">9</span> )&#123;  <span class="comment">//夏天</span></span><br><span class="line">    <span class="keyword">return</span> price * <span class="number">0.8</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> price;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 观察这句代码( 这里主要判断是不是夏天7-9月 )</span></span><br><span class="line"><span class="keyword">if</span>( data.getMonth() &gt;= <span class="number">6</span> &amp;&amp; data.getMonth &lt;= <span class="number">9</span> )&#123;  <span class="comment">//夏天</span></span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成</span></span><br><span class="line"><span class="keyword">var</span> isSummer = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="keyword">return</span> data.getMonth() &gt;= <span class="number">6</span> &amp;&amp; data.getMonth &lt;= <span class="number">9</span> ;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getPrice = <span class="function"><span class="keyword">function</span>(<span class="params"> price </span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>( isSummer() )&#123; <span class="comment">// 夏天</span></span><br><span class="line">    <span class="keyword">return</span> price * <span class="number">0.8</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> price;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="合理使用循环">合理使用循环</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧的</span></span><br><span class="line"><span class="keyword">var</span> createXHR = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  vat xhr;</span><br><span class="line">  <span class="keyword">try</span>&#123;</span><br><span class="line">    xhr = <span class="keyword">new</span> ActiveXObject( <span class="string">'MSXML2.XMLHttp.6.0'</span> );</span><br><span class="line">  &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">      xhr = <span class="keyword">new</span> ActiveXObject( <span class="string">'MSXML2.XMLHttp.3.0'</span> );</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">      xhr = <span class="keyword">new</span> ActiveXObject( <span class="string">'MSXML2.XMLHttp'</span> );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> xhr;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = createXHR();</span><br><span class="line"><span class="comment">// 改成（这里我们灵活的运用循环）</span></span><br><span class="line"><span class="keyword">var</span> createXHR = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  vat versions = [<span class="string">'MSXML2.XMLHttp.6.0'</span>, <span class="string">'MSXML2.XMLHttp.3.0'</span>, <span class="string">'MSXML2.XMLHttp'</span>];</span><br><span class="line">  <span class="keyword">for</span>( <span class="keyword">var</span> i=<span class="number">0</span>, version; version = versions[i++]; )&#123;</span><br><span class="line">   <span class="keyword">try</span>&#123;</span><br><span class="line">      xhr = <span class="keyword">new</span> ActiveXObject( version );</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> xhr;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = createXHR();</span><br></pre></td></tr></table></figure>
+<h2 id="提前让函数退出代替嵌套条件分支">提前让函数退出代替嵌套条件分支</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面这段伪代码遵守 "函数只有一个出口"的典型风格</span></span><br><span class="line"><span class="keyword">var</span> del = <span class="function"><span class="keyword">function</span>(<span class="params"> obj </span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> ret;</span><br><span class="line">  <span class="keyword">if</span>( !obj.isReadyOnly )&#123; <span class="comment">// 不为只读的才能被删除</span></span><br><span class="line">    <span class="keyword">if</span>( obj.ifFolder )&#123;  <span class="comment">// 如果是文件夹</span></span><br><span class="line">      rel = deleteFolder( obj );</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>( obj.isFile )&#123;  <span class="comment">// 如果是文件</span></span><br><span class="line">      rel = deleteFile( obj );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> rel;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成</span></span><br><span class="line"><span class="keyword">var</span> del = <span class="function"><span class="keyword">function</span>(<span class="params"> obj </span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>( obj.isReadyOnly )&#123;  <span class="comment">// 反转if表达式</span></span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>( obj.ifFolder )&#123;</span><br><span class="line">   rel = deleteFolder( obj );</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>( obj.isFile )&#123;</span><br><span class="line">   rel = deleteFile( obj );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="传递对象参数代替过长的参数列表">传递对象参数代替过长的参数列表</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧的</span></span><br><span class="line"><span class="keyword">var</span> setUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params">id, name, des, sex, qq, mobile</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">"id="</span> + id );</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">"name="</span> + name );</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">"title="</span> + title );</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setUserInfo(<span class="number">11</span>, <span class="string">'kk'</span>, <span class="string">'按时打算打算'</span>, <span class="number">12</span>, <span class="number">122222</span>, <span class="number">159</span>********);</span><br><span class="line"></span><br><span class="line"><span class="comment">//  改成（这时我们可以把参数都放入一个对象内）</span></span><br><span class="line"><span class="keyword">var</span> setUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params"> obj </span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">"id="</span> + obj.id );</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">"name="</span> + obj.name );</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">"des="</span> + obj.des );</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setUserInfo(&#123;</span><br><span class="line">  id: <span class="number">11</span>,</span><br><span class="line">  name: <span class="string">'kk'</span>,</span><br><span class="line">  des: <span class="string">'按时打算打算'</span>,</span><br><span class="line">  sex: <span class="number">12</span>,</span><br><span class="line">  qq: <span class="number">122222</span>,</span><br><span class="line">  mobile: <span class="string">'159********'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="尽量减少参数数量">尽量减少参数数量</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设要绘制一个正方形</span></span><br><span class="line"><span class="keyword">var</span> draw = <span class="function"><span class="keyword">function</span>(<span class="params">width, height, square</span>)</span>&#123; <span class="comment">// square是多余的</span></span><br><span class="line">  <span class="keyword">var</span> square = width * height;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成</span></span><br><span class="line"><span class="keyword">var</span> draw = <span class="function"><span class="keyword">function</span>(<span class="params">width, height</span>)</span>&#123; </span><br><span class="line">  <span class="keyword">var</span> square = width * height;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>假设它以后要绘制圆形，width和height传入圆半径，square始终不能让客户传入，而是应该在draw内部处理</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/15/编写可维护的js代码-变量，函数和运算符/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于类型的继承</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Untitled" data-title="代码重构" data-url="http://yoursite.com/2015/12/29/Untitled/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"luckk"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 KK
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
