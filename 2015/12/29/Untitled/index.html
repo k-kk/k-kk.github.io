@@ -5,16 +5,16 @@
   
   <title>代码重构 | Hello Hexo - 新的开始</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123; 	 console.log(data.id);    console.log(data.name);    console.lo">
+  <meta name="description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123;   console.log( data.id );   console.log( data.name );   console.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="代码重构">
 <meta property="og:url" content="http://yoursite.com/2015/12/29/Untitled/index.html">
 <meta property="og:site_name" content="Hello Hexo - 新的开始">
-<meta property="og:description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123; 	 console.log(data.id);    console.log(data.name);    console.lo">
-<meta property="og:updated_time" content="2016-01-04T15:09:11.479Z">
+<meta property="og:description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123;   console.log( data.id );   console.log( data.name );   console.">
+<meta property="og:updated_time" content="2016-01-05T13:00:30.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码重构">
-<meta name="twitter:description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123; 	 console.log(data.id);    console.log(data.name);    console.lo">
+<meta name="twitter:description" content="提炼函数123456789101112131415161718192021// 旧的var getUserInfo = function()&amp;#123;  $ajax(&apos;http://xxx.com/userInfo.pnp&apos;, function(data)&amp;#123;   console.log( data.id );   console.log( data.name );   console.">
   
     <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
   
@@ -31,7 +31,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="http://luckk.me/img/portrait.jpg" class="js-avatar">
+			<img lazy-src="http://www.luckk.me/src/img/pc/portrait.jpg" class="js-avatar">
 			
 		</a>
 
@@ -142,7 +142,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="http://luckk.me/img/portrait.jpg" class="js-avatar">
+				<img lazy-src="http://www.luckk.me/src/img/pc/portrait.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author">KK</h1>
@@ -215,7 +215,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="提炼函数">提炼函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧的</span></span><br><span class="line"><span class="keyword">var</span> getUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $ajax(<span class="string">'http://xxx.com/userInfo.pnp'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line"> 	 <span class="built_in">console</span>.log(data.id);</span><br><span class="line">    <span class="built_in">console</span>.log(data.name);</span><br><span class="line">    <span class="built_in">console</span>.log(data.nickName);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成</span></span><br><span class="line"><span class="keyword">var</span> getUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $ajax(<span class="string">'http://xxx.com/userInfo.pnp'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> data </span>)</span>&#123;</span><br><span class="line"> 	 printDetails( data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> printDetails = <span class="function"><span class="keyword">function</span>(<span class="params"> data </span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log( data.id );</span><br><span class="line">   <span class="built_in">console</span>.log( data.name );</span><br><span class="line">   <span class="built_in">console</span>.log( data.nickName );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h2 id="提炼函数">提炼函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 旧的</span></span><br><span class="line"><span class="keyword">var</span> getUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $ajax(<span class="string">'http://xxx.com/userInfo.pnp'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log( data.id );</span><br><span class="line">   <span class="built_in">console</span>.log( data.name );</span><br><span class="line">   <span class="built_in">console</span>.log( data.nickName );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 改成</span></span><br><span class="line"><span class="keyword">var</span> getUserInfo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $ajax(<span class="string">'http://xxx.com/userInfo.pnp'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> data </span>)</span>&#123;</span><br><span class="line">   printDetails( data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> printDetails = <span class="function"><span class="keyword">function</span>(<span class="params"> data </span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log( data.id );</span><br><span class="line">   <span class="built_in">console</span>.log( data.name );</span><br><span class="line">   <span class="built_in">console</span>.log( data.nickName );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>避免出现超大函数</li>
 <li>独立出来的函数有助于代码复用</li>
