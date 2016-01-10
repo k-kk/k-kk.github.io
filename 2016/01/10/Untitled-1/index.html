@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>编写可维护的javascript代码（注释） | Hello Hexo - 新的开始</title>
+  <title>面向对象--多态 | Hello Hexo - 新的开始</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.单行注释 h41// 这是一句单行注释">
+  <meta name="description" content="以下是一段“多态”的javascript代码12345678910111213var makeSound = function( animal )&amp;#123;  if( animal instanceof Duck )&amp;#123;   console.log(&apos;嘎嘎&apos;);  &amp;#125;else if( animal instanceof Chicken )&amp;#123;   console.log">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编写可维护的javascript代码（注释）">
-<meta property="og:url" content="http://yoursite.com/2015/11/27/page/index.html">
+<meta property="og:title" content="面向对象--多态">
+<meta property="og:url" content="http://yoursite.com/2016/01/10/Untitled-1/index.html">
 <meta property="og:site_name" content="Hello Hexo - 新的开始">
-<meta property="og:description" content="1.单行注释 h41// 这是一句单行注释">
-<meta property="og:updated_time" content="2015-11-29T04:08:04.161Z">
+<meta property="og:description" content="以下是一段“多态”的javascript代码12345678910111213var makeSound = function( animal )&amp;#123;  if( animal instanceof Duck )&amp;#123;   console.log(&apos;嘎嘎&apos;);  &amp;#125;else if( animal instanceof Chicken )&amp;#123;   console.log">
+<meta property="og:updated_time" content="2016-01-10T15:17:49.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编写可维护的javascript代码（注释）">
-<meta name="twitter:description" content="1.单行注释 h41// 这是一句单行注释">
+<meta name="twitter:title" content="面向对象--多态">
+<meta name="twitter:description" content="以下是一段“多态”的javascript代码12345678910111213var makeSound = function( animal )&amp;#123;  if( animal instanceof Duck )&amp;#123;   console.log(&apos;嘎嘎&apos;);  &amp;#125;else if( animal instanceof Chicken )&amp;#123;   console.log">
   
     <link rel="alternative" href="/atom.xml" title="Hello Hexo - 新的开始" type="application/atom+xml">
   
@@ -178,11 +178,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-page" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Untitled-1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/27/page/" class="article-date">
-  	<time datetime="2015-11-26T16:00:00.000Z" itemprop="datePublished">2015-11-27</time>
+      <a href="/2016/01/10/Untitled-1/" class="article-date">
+  	<time datetime="2016-01-10T14:55:00.000Z" itemprop="datePublished">2016-01-10</time>
 </a>
     </div>
   
@@ -195,7 +195,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      编写可维护的javascript代码（注释）
+      面向对象--多态
     </h1>
   
 
@@ -204,14 +204,10 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码规范/">代码规范</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/注释/">注释</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/多态/">多态</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
 	</div>
 
         
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/javascript/">javascript</a><a class="article-category-link" href="/categories/javascript/代码规范/">代码规范</a>
-	</div>
-
 
         <div class="clearfix"></div>
       </div>
@@ -219,16 +215,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-单行注释_h4">1.单行注释 h4</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是一句单行注释</span></span><br></pre></td></tr></table></figure>
+        <h3 id="以下是一段“多态”的javascript代码">以下是一段“多态”的javascript代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> makeSound = <span class="function"><span class="keyword">function</span>(<span class="params"> animal </span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>( animal <span class="keyword">instanceof</span> Duck )&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'嘎嘎'</span>);</span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>( animal <span class="keyword">instanceof</span> Chicken )&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'咯咯'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Duck = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> Chicken = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line">makeSound( <span class="keyword">new</span> Duck() );</span><br><span class="line">makeSound( <span class="keyword">new</span> Chicken() );</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="2-多行注释h4">2.多行注释h4</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 这里是代码 */</span></span><br></pre></td></tr></table></figure>
-   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line">  这里都是注释</span><br><span class="line">　　 1232132</span><br><span class="line">*/</span></span><br></pre></td></tr></table></figure>
-<h2 id="java的注释风格h4">java的注释风格h4</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span><br><span class="line"> * 另一段注释</span><br><span class="line"> * 这段注释包含2个文本 </span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure>
-<h2 id="3_文档注释h4">3  文档注释h4</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * @method merge</span><br><span class="line"> * @param &#123;Object&#125; 被合并的一个或多个对象</span><br><span class="line"> * @return &#123;Object&#125; 一个新的被合并后的对象</span><br><span class="line"> **/</span></span><br></pre></td></tr></table></figure>
-<p>这里推荐大家一个地址，大家可以去看一看 点击查看注释大全</p>
-<p>Sublime注释插件-Doc​Blockr<br>功能<br>生成优美注释</p>
-<p>简介<br>标准的注释，包括函数名、参数、返回值等，并以多行显示，省去手动编写</p>
-<p>wiki<br><a href="https://github.com/spadgos/sublime-jsdocs" target="_blank" rel="external">https://github.com/spadgos/sublime-jsdocs</a><br><a href="https://sublime.wbond.net/packages/DocBlockr" target="_blank" rel="external">https://sublime.wbond.net/packages/DocBlockr</a></p>
+<p>以上代码确实体现了多态性，但是如果在增加一个狗呢？<br>多态的思想是将“做什么”和”谁去做以及怎么做” 分离开来，也就是将<br>“不变的事情与可能改变的分离出来”。<br>下面是改写后的代码，把不变的部分分离出来，那就是动物的叫声，然后<br>把可变的部分的封装起来，这里的多态实际是指对象的多态性；<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> makeSound = <span class="function"><span class="keyword">function</span>(<span class="params"> animal </span>)</span>&#123;</span><br><span class="line">  animal.sound();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Duck = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line">Duck.prototype.sound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">'嘎嘎'</span> )</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Chicken = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line">Chicken.prototype.sound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">'咯咯'</span> );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">makeSound( <span class="keyword">new</span> Duck() ); <span class="comment">// 嘎嘎</span></span><br><span class="line">makeSound( <span class="keyword">new</span> Chicken() ); <span class="comment">// 咯咯</span></span><br></pre></td></tr></table></figure></p>
+<p>如果在改后的代码增加别的动画，这样就很好增加了！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Dog = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line">Dog.prototype.sound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log( <span class="string">'汪汪'</span> );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">makeSound( <span class="keyword">new</span> Dog() ); <span class="comment">// 汪汪</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -238,18 +228,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/28/draft/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          移动端html5重力感应
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/26/post/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">编写可维护的javascript代码（基本格式化）</div>
+    <a href="/2015/12/29/Untitled/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">代码重构</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -278,7 +259,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="page" data-title="编写可维护的javascript代码（注释）" data-url="http://yoursite.com/2015/11/27/page/"></div>
+	<div class="ds-thread" data-thread-key="Untitled-1" data-title="面向对象--多态" data-url="http://yoursite.com/2016/01/10/Untitled-1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
